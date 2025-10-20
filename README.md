@@ -23,13 +23,11 @@ The goal is to improve classification performance on tabular datasets using synt
 You can download the synthetic datasets used in the experiments here:
 
 👉 **[Download Synthetic Datasets](https://drive.google.com/drive/folders/1gKbiHtOFnkVBPohg-dkmBrMisHuBY0KI?usp=sharing)**  
-(Replace with actual link)
 
 ### 🧠 Pretrained Models
 Download pretrained teacher and student models here:
 
 👉 **[Download Pretrained Weights](https://drive.google.com/drive/folders/1gKbiHtOFnkVBPohg-dkmBrMisHuBY0KI?usp=sharing)**  
-(Replace with actual link)
 
 After downloading, extract the files into the project directory as follows:
 
