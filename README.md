@@ -32,9 +32,13 @@ Download pretrained teacher and student models here:
 After downloading, extract the files into the project directory as follows:
 
 project-root/
+
 ├── syn_vision_dataset/
+
 │ └── [your datasets here]
+
 ├── checkpoints/
+
 │ └── [best_model.pth,best_model_res152_dif_p1.pth]
 
 
