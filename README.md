@@ -69,23 +69,15 @@ Open and run distillation_test.ipynb inside each experiment folder to verify per
 🏋️ 2. Train Models from Scratch
 Step 1: Train Teacher
 
-python
-Copy code
-# Run this notebook
 train_teacher.ipynb
-Step 2: Train Student with Distillation
 
-python
-Copy code
-# Run this notebook
+Step 2: Train the Student with Distillation
+
 distillation_train.ipynb
 
 🧬 🚀 How to Generate Synthetic Data
 To create image-like spatial representations from tabular data:
 
-python
-Copy code
-# Run this notebook
 syn_vision_gen.ipynb
 
 📧 Contact
