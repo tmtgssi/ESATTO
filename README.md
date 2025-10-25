@@ -1,89 +1,86 @@
-# Lightweight-Oriented Classification Using Distillation Learning and Spatial Information from Tabular Data
+🌾 Noise-Reduction-Oriented Super-Resolution Reconstruction for Precision Agriculture Applications
 
 This repository accompanies the project:
 
-> **"Lightweight-Oriented Classification Using Distillation Learning and Spatial Information from Tabular Data"**
+"Noise-Reduction-Oriented Super-Resolution Reconstruction for Precision Agriculture Applications"
 
-The goal is to improve classification performance on tabular datasets using synthetic spatial representations and knowledge distillation. A lightweight student model is trained to mimic a heavier teacher model while utilizing spatial features generated from raw tabular data.
+The goal of this work is to enhance image quality in precision agriculture by leveraging super-resolution reconstruction with an emphasis on noise reduction. The approach aims to recover fine spatial details while suppressing noise to improve analysis accuracy for agricultural monitoring and decision support.
 
----
+📂 Repository Structure
 
-## 📂 Contents
+🏋️ training/ — Contains scripts and configuration files for model training.
 
-- 🔬 `train_teacher.ipynb` — Train a high-capacity teacher model.
-- 🧠 `distillation_train.ipynb` — Train a compact student model via distillation.
-- 🧪 `distillation_test.ipynb` — Evaluate classification accuracy and visualize performance.
-- 🧬 `syn_vision_gen.ipynb` — Generate synthetic image-like data from tabular inputs.
+To start training, run the bash script:
 
----
+cd training
+bash run_train.sh
 
-## 📦 Dataset and Pretrained Models
 
-### 📁 Synthetic Datasets
-You can download the synthetic datasets used in the experiments here:
+🔍 inference/ — Contains inference and evaluation scripts.
 
-👉 **[Download Synthetic Datasets](https://drive.google.com/drive/folders/1gKbiHtOFnkVBPohg-dkmBrMisHuBY0KI?usp=sharing)**  
+Includes a log/ folder with reported experimental results.
 
-### 🧠 Pretrained Models
-Download pretrained teacher and student models here:
+Pretrained checkpoints can be downloaded directly from this folder or from the link below.
 
-👉 **[Download Pretrained Weights](https://drive.google.com/drive/folders/1gKbiHtOFnkVBPohg-dkmBrMisHuBY0KI?usp=sharing)**  
+🧠 Pretrained Models and Checkpoints
 
-After downloading, extract the files into the project directory as follows:
+Download pretrained super-resolution models from:
+
+👉 Download Checkpoints
+
+
+After downloading, place the files as follows:
 
 project-root/
+├── training/
+│   └── run.sh
+├── inference/
+│   ├── log/
+│   └── [downloaded_checkpoints_here]
 
-├── syn_vision_dataset/
+🧬 Dataset Information
+🖼️ Training Dataset
 
-│ └── [your datasets here]
+https://data.vision.ee.ethz.ch/cvl/DIV2K/
 
-├── checkpoints/
+The model is trained on the DIV2K dataset, a high-quality benchmark for image super-resolution.
 
-│ └── [best_model.pth,best_model_res152_dif_p1.pth]
+🎯 Saliency Maps
 
+We generate custom saliency maps by applying Gaussian filtering to enhance spatial attention.
 
----
+👉 Download Saliency Data and 🧪 Test Datasets
 
-## ⚙️ Environment Setup
+https://drive.google.com/drive/folders/1_X74k8hHqH-r0lA9RR5hrm4PKX3sI6rc?usp=sharing
 
-We recommend using a virtual environment (`conda` or `venv`) and installing dependencies via `pip`.
+⚙️ Environment Setup
 
-### 🐍 Python Version
-```text
-absl-py==2.1.0
-torch==2.5.0
-torchvision==0.20.0
-tensorflow==2.9.0
-scikit-learn-intelex==20230228.214242
-timm==1.0.15
-lightgbm==4.5.0
-pytorch-lightning==2.5.1.post0
-pandas==2.2.3
-numpy==1.26.0
-matplotlib
+We recommend using a Python virtual environment (conda or venv).
+
+🐍 Required Dependencies
+
+pip install -r requirements.txt
 
 🚀 How to Run
-✅ 1. Verify Results
-Open and run distillation_test.ipynb inside each experiment folder to verify performance using pretrained weights.
 
-🏋️ 2. Train Models from Scratch
-Step 1: Train Teacher
+✅ 1. Train the Model
 
-train_teacher.ipynb
+Run the training script:
 
-Step 2: Train the Student with Distillation
+cd training
+bash run.sh
 
-distillation_train.ipynb
+🔬 2. Inference and Evaluation
 
-🧬 🚀 How to Generate Synthetic Data
-To create image-like spatial representations from tabular data:
+Navigate to the inference folder:
 
-syn_vision_gen.ipynb
+cd inference
+
+bash run_SR.sh
 
 📧 Contact
-If you have questions or need assistance, feel free to contact:
+
+For any questions, issues, or collaboration inquiries, please contact:
 
 Minh Trieu Tran
 📨 minhtrieu.tran@gssi.it
-
-
